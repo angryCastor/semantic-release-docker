@@ -40,7 +40,9 @@ module.exports = async (pluginConfig, ctx) => {
     }
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.log(Object.keys(err))
+    console.log('keys', Object.keys(err))
+    // eslint-disable-next-line no-console
+    console.log('err', err)
     throw new AggregateError([getError('EDOCKERIMAGETAG', ctx)])
   }
 }
